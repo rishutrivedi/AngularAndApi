@@ -1,0 +1,2 @@
+<app-add-empoloy (addEmpoloyee)="addEmpoloyee($event)"></app-add-empoloy>
+<app-employee-item *ngFor = "let d of data" [p]="d" (onDeleteEmpoloy)="deleteEmpoloy(d)"></app-employee-item>

@@ -1,0 +1,47 @@
+<ul *ngFor="let user of userdata">
+    <li>{{user.name}}</li>
+    <li>{{user.username}}</li>
+    <li>{{user.email}}</li>
+    <li>{{user.phone}}</li>
+    <li>{{user.website}}</li>
+</ul>
+<div class="container">
+    <button class="btn btn-success" (click)="addUser()">Adduser</button>
+</div>
+<div class="row" *ngIf="!isCreateMode">
+
+</div>
+<div class="row" *ngIf="isCreateMode">
+    <div class="row">
+    <div class="col-md-6">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="user.name" placeholder="name" class="form-control" /></div>
+    <div class="col-md-6">
+    <label>User Name</label>
+    <input type="text" [(ngModel)]="user.username" placeholder="username" class="form-control" />
+     </div>
+     </div>
+    <div class="row">
+    <div class="col-md-6">
+    <label>Email</label>
+    <input type="text" [(ngModel)]="user.email" placeholder="email" class="form-control" />
+    </div>
+    <div class="col-md-6">
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="user.phone" placeholder="phone" class="form-control" />
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+    <label>Website</label>
+    <input type="text" [(ngModel)]="user.website" placeholder="website" class="form-control" />
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-secondary"  (click)="cancel()">Cancel</button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-success" (click)="saveUser()">saveuser</button>
+        </div>
+    </div>

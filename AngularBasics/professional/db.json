@@ -1,0 +1,19 @@
+{
+  "empoloyee": [
+    {
+      "id": 5,
+      "name": "shivam",
+      "email": "shivam@gmail.com",
+      "phonenumber": "9935654875",
+      "prof": "testing",
+      "project": false
+    },
+    {
+      "name": "rishu",
+      "email": "r@gmail.com",
+      "phonenumber": "53148964761",
+      "prof": "developer",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "rishu",
+      "score": 150,
+      "email": "r@gmail.com",
+      "phone": 63929104747
+    },
+    {
+      "id": 2,
+      "name": "aman",
+      "score": 160,
+      "email": "ri@gmail.com",
+      "phone": 63929104747
+    },
+    {
+      "id": 3,
+      "name": "shivam",
+      "score": 170,
+      "email": "rish@gmail.com",
+      "phone": 63929104747
+    }
+  ]
+}

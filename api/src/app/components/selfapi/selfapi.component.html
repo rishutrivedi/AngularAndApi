@@ -1,0 +1,44 @@
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr *ngFor="let user of userlist">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.score}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td><button class="btn btn-secondry" (click)="delete(user.id)">Delete</button></td>
+        </tr>
+    </table>
+    <button class="btn btn-success" (click)="adduser()">Adduser</button>
+    <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+</div>
+<div class="row" *ngIf="!isCreateMode">
+</div>
+<div class="row" *ngIf="isCreateMode">
+    <form (ngSubmit)="saveUser()">
+        <div class="row">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="user.name" placeholder="name" class="form-control" name="name"/>
+        </div>
+        <div class="row">
+            <label>Score</label>
+            <input type="text" [(ngModel)]="user.score" placeholder="score" class="form-control" name="score"/>
+        </div>
+        <div class="row">
+            <label>Email</label>
+            <input type="text" [(ngModel)]="user.email" placeholder="email" class="form-control" name="email"/>
+        </div>
+        <div class="row">
+            <label>Phone</label>
+            <input type="text" [(ngModel)]="user.phone" placeholder="phone" class="form-control" name="phone"/>
+        </div>
+        <button class="btn btn-success">ADD</button>
+    </form>
+</div>
